@@ -1559,7 +1559,7 @@ dependencies = [
 [[package]]
 name = "protocol_product"
 version = "0.2.0"
-source = "git+https://github.com/MonacoProtocol/protocol-product?rev=v0.2.0#10b312aa6db7402f31f6fcf5324379196ee85a31"
+source = "git+https://github.com/azkevin139/culture-product.git?rev=ffcdb3dd61d7985a3a8dcf0c24a095fa4e6e95cf#ffcdb3dd61d7985a3a8dcf0c24a095fa4e6e95cf"
 dependencies = [
  "anchor-lang",
  "rust_decimal",

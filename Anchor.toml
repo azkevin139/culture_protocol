@@ -1,3 +1,7 @@
+[toolchain]
+anchor_version = "0.29.0"
+solana_version = "1.17.30"
+
 [programs.localnet]
 monaco_protocol = "7i2N9qqqcfne1BouHhMw1vvNAo2aeVwwWhecWy5XrKqY"
 
