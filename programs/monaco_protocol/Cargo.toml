@@ -5,7 +5,7 @@
 [package]
 name = "monaco_protocol"
 version = "0.16.0-dev"
-description = "Created with Anchor"
+description = "Culture Markets Protocol program"
 edition = "2018"
 
 [lib]
