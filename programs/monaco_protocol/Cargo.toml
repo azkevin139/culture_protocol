@@ -25,4 +25,4 @@ anchor-spl = "0.29.0"
 spl-token = "4.0.0"
 rust_decimal = "1.32.0"
 test-case = "3.2.1"
-protocol_product = { git = "https://github.com/MonacoProtocol/protocol-product", rev = "v0.2.0", features = ["no-entrypoint"] }
+protocol_product = { git = "https://github.com/azkevin139/culture-product.git", rev = "v0.2.0", features = ["no-entrypoint"] }
