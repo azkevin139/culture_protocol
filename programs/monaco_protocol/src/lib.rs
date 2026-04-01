@@ -25,13 +25,13 @@ pub mod instructions;
 pub mod state;
 
 #[cfg(feature = "stable")]
-declare_id!("E3iPA3DuYoUa2kbH7enBXpPu3s5a7WCfJVg1F83Mghnv");
+declare_id!("7i2N9qqqcfne1BouHhMw1vvNAo2aeVwwWhecWy5XrKqY");
 #[cfg(feature = "dev")]
-declare_id!("E3iPA3DuYoUa2kbH7enBXpPu3s5a7WCfJVg1F83Mghnv");
+declare_id!("7i2N9qqqcfne1BouHhMw1vvNAo2aeVwwWhecWy5XrKqY");
 #[cfg(feature = "edge")]
-declare_id!("E3iPA3DuYoUa2kbH7enBXpPu3s5a7WCfJVg1F83Mghnv");
+declare_id!("7i2N9qqqcfne1BouHhMw1vvNAo2aeVwwWhecWy5XrKqY");
 #[cfg(not(any(feature = "stable", feature = "dev", feature = "edge")))]
-declare_id!("E3iPA3DuYoUa2kbH7enBXpPu3s5a7WCfJVg1F83Mghnv");
+declare_id!("7i2N9qqqcfne1BouHhMw1vvNAo2aeVwwWhecWy5XrKqY");
 
 #[program]
 pub mod monaco_protocol {
