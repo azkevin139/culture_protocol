@@ -1,0 +1,9 @@
+This repository includes software derived from the Monaco Protocol project.
+
+Original upstream project:
+- Monaco Protocol / protocol
+
+This fork is maintained as part of the Culture Markets stack.
+It contains modifications made after forking, including ongoing changes for sovereign deployment, branding, configuration, and infrastructure ownership.
+
+All original copyright, license, and attribution notices required by the Apache License, Version 2.0 are retained in this repository.
