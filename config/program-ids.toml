@@ -1,0 +1,14 @@
+[localnet]
+protocol = "E3iPA3DuYoUa2kbH7enBXpPu3s5a7WCfJVg1F83Mghnv"
+product = "F56JTFUQa2Gao3fCtTZmUUkTdmVYypGmRp1kkYeJ4Da7"
+event = "mhnJsDaponJ6wMz25p55ZMQeGGBK8UobnCVPswjf5X5"
+
+[devnet]
+protocol = "E3iPA3DuYoUa2kbH7enBXpPu3s5a7WCfJVg1F83Mghnv"
+product = "F56JTFUQa2Gao3fCtTZmUUkTdmVYypGmRp1kkYeJ4Da7"
+event = "mhnJsDaponJ6wMz25p55ZMQeGGBK8UobnCVPswjf5X5"
+
+[mainnet]
+protocol = "TBD"
+product = "TBD"
+event = "TBD"
