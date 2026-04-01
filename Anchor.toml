@@ -1,5 +1,8 @@
 [programs.localnet]
-monaco_protocol = "E3iPA3DuYoUa2kbH7enBXpPu3s5a7WCfJVg1F83Mghnv"
+monaco_protocol = "7i2N9qqqcfne1BouHhMw1vvNAo2aeVwwWhecWy5XrKqY"
+
+[programs.devnet]
+monaco_protocol = "7i2N9qqqcfne1BouHhMw1vvNAo2aeVwwWhecWy5XrKqY"
 
 [registry]
 url = "https://anchor.projectserum.com"
@@ -12,5 +15,5 @@ wallet = "~/.config/solana/id.json"
 test = "yarn runJestTests"
 
 [[test.genesis]]
-address = "F56JTFUQa2Gao3fCtTZmUUkTdmVYypGmRp1kkYeJ4Da7"
+address = "2cTEcEM1B5pkVFrqSFnUDowgbRvqc5uoagRBAQ1Uehh7"
 program = "tests/anchor/protocol_product/protocol_product.so"
