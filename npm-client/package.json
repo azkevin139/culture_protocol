@@ -1,18 +1,18 @@
 {
-  "name": "@monaco-protocol/client",
+  "name": "@culture-markets/client",
   "version": "13.0.0-dev",
-  "description": "Interface package for the Monaco Protocol on Solana",
-  "author": "Monaco Protocol",
+  "description": "Interface package for the Culture Markets Protocol on Solana",
+  "author": "Culture Markets",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MonacoProtocol/protocol.git",
+    "url": "git+https://github.com/azkevin139/culture_protocol.git",
     "directory": "npm-client"
   },
   "bugs": {
-    "url": "https://github.com/MonacoProtocol/protocol/issues"
+    "url": "https://github.com/azkevin139/culture_protocol/issues"
   },
-  "homepage": "https://github.com/MonacoProtocol/protocol/blob/main/npm-client/README.md",
+  "homepage": "https://github.com/azkevin139/culture_protocol/blob/develop/npm-client/README.md",
   "main": "src/index.js",
   "module": "src/index.js",
   "files": [
