@@ -7,38 +7,58 @@ import { AnchorProvider, getProvider, Program } from "@coral-xyz/anchor";
 import { getMint } from "@solana/spl-token";
 import { Buffer } from "buffer";
 import process from "process";
+import {
+  ACTIVE_PROGRAM_IDS,
+  PROGRAM_IDS,
+  SolanaEnvironment,
+} from "../config/programIds";
 
-const PROGRAM_TYPE = {
-  release: new PublicKey("monacoUXKtUi6vKsQwaLyxmXKSievfNWEcYXTgkbCih"),
-  edge: new PublicKey("mpDEVnZKneBb4w1vQsoTgMkNqnFe1rwW8qjmf3NsrAU"),
-};
+function resolveCultureEnvironment(): SolanaEnvironment {
+  const env = (process.env.CULTURE_ENV || "").toLowerCase();
+  if (!env) return "devnet";
+
+  if (env === "localnet" || env === "devnet" || env === "mainnet") {
+    return env as SolanaEnvironment;
+  }
+
+  console.log(
+    `Invalid CULTURE_ENV value: ${process.env.CULTURE_ENV}. Expected one of <localnet|devnet|mainnet>.`,
+  );
+  process.exit(1);
+}
+
+function resolveProtocolProgramId(): PublicKey {
+  const explicitProgramAddress = process.env.PROGRAM_ADDRESS;
+  if (explicitProgramAddress) {
+    return new PublicKey(explicitProgramAddress);
+  }
+
+  const environment = resolveCultureEnvironment();
+  const configuredProgramId = PROGRAM_IDS[environment]?.protocol;
+
+  if (!configuredProgramId) {
+    console.log(
+      `No protocol program ID configured for CULTURE_ENV=${environment}. Update config/programIds.ts or set PROGRAM_ADDRESS.`,
+    );
+    process.exit(1);
+  }
+
+  return new PublicKey(configuredProgramId);
+}
 
 export async function getProtocolProgram() {
   const provider = getAnchorProvider();
-
-  let programId = process.env.PROGRAM_ADDRESS;
-  if (programId == undefined) {
-    const program = process.env.PROGRAM_TYPE;
-    if (program == undefined) {
-      console.log("Please ensure PROGRAM_TYPE variable is set <release|edge>");
-      process.exit(1);
-      return;
-    }
-
-    // TODO need to support other clusters here too, e.g., localnet
-    programId = PROGRAM_TYPE[program.toLowerCase()];
-    if (programId == undefined) {
-      console.log(`Program id not found for PROGRAM_TYPE ${program}`);
-      process.exit(1);
-      return;
-    }
-  }
-
+  const programId = resolveProtocolProgramId();
   return Program.at(programId, provider);
 }
 
 export function getAnchorProvider(): AnchorProvider {
   return getProvider() as AnchorProvider;
+}
+
+export function getActiveProgramIds() {
+  const environment = resolveCultureEnvironment();
+  return PROGRAM_IDS[environment] || ACTIVE_PROGRAM_IDS;
 }
 
 export async function getMintInfo(mintPK: PublicKey) {
@@ -88,7 +108,6 @@ export async function batchProcessInstructions(
     const instruction = instructions[i];
     instructionBatch.push(instruction);
 
-    // BATCH LIMIT REACHED - SEND TRANSACTION
     if (instructionBatch.length == batchSize || i == instructions.length - 1) {
       const transaction = new Transaction();
 
