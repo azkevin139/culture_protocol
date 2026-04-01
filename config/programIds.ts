@@ -8,14 +8,14 @@ export type ProgramIdSet = {
 
 export const PROGRAM_IDS: Record<SolanaEnvironment, ProgramIdSet> = {
   localnet: {
-    protocol: "",
-    product: "",
-    event: "",
+    protocol: "7i2N9qqqcfne1BouHhMw1vvNAo2aeVwwWhecWy5XrKqY",
+    product: "2cTEcEM1B5pkVFrqSFnUDowgbRvqc5uoagRBAQ1Uehh7",
+    event: "Q4JNMDYYGb1kktLz1yr6p5PktLvCyVCDcThzmjzji5i",
   },
   devnet: {
-    protocol: "",
-    product: "",
-    event: "",
+    protocol: "7i2N9qqqcfne1BouHhMw1vvNAo2aeVwwWhecWy5XrKqY",
+    product: "2cTEcEM1B5pkVFrqSFnUDowgbRvqc5uoagRBAQ1Uehh7",
+    event: "Q4JNMDYYGb1kktLz1yr6p5PktLvCyVCDcThzmjzji5i",
   },
   mainnet: {
     protocol: "",
