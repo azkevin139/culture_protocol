@@ -1,3 +1,7 @@
+// Modified from the Monaco Protocol codebase.
+// Copyright and attribution notices preserved under Apache License 2.0.
+// This file is maintained as part of the Culture Markets fork.
+
 use anchor_lang::prelude::*;
 
 use crate::context::*;

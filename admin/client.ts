@@ -1,3 +1,7 @@
+// Modified from the Monaco Protocol codebase.
+// Copyright and attribution notices preserved under Apache License 2.0.
+// This file is maintained as part of the Culture Markets fork.
+
 import * as anchor from "@coral-xyz/anchor";
 import { create_market, getMarketsByStatus } from "./create_market";
 import { create_order } from "./create_order";
