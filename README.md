@@ -9,6 +9,7 @@
 This is the repository of the main Solana program of The Monaco Protocol, _protocol_, as well as JavaScript clients to help with interacting with the protocol.
 
 The protocol is currently in beta, though it is available both on devnet and mainnet-beta.
+> This repository is a Culture Markets fork derived from the Monaco Protocol `protocol` codebase and maintained under the Apache License 2.0 with required attribution preserved.
 
 # Where to find the protocol :mag:
 
